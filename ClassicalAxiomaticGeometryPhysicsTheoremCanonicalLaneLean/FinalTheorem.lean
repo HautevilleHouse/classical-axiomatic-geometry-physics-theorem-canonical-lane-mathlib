@@ -1,0 +1,19 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.ClassicalAxiomaticGeometryPhysicsTheoremCanonicalLaneLean.AxiomaticSpaceTime
+import HautevilleHouse.ClassicalAxiomaticGeometryPhysicsTheoremCanonicalLaneLean.GeodesicStructure
+import HautevilleHouse.ClassicalAxiomaticGeometryPhysicsTheoremCanonicalLaneLean.KillingFields
+import HautevilleHouse.ClassicalAxiomaticGeometryPhysicsTheoremCanonicalLaneLean.EnergyMomentum
+import HautevilleHouse.ClassicalAxiomaticGeometryPhysicsTheoremCanonicalLaneLean.InitialValue
+
+namespace HautevilleHouse
+namespace ClassicalAxiomaticGeometryPhysicsTheoremCanonicalLaneLean
+
+def ConstrainedClassicalAxiomaticGeometryPhysicsClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_classical_axiomatic_geometry_physics_endgame (A : AdmissibleClass) :
+    ConstrainedClassicalAxiomaticGeometryPhysicsClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end ClassicalAxiomaticGeometryPhysicsTheoremCanonicalLaneLean
+end HautevilleHouse
